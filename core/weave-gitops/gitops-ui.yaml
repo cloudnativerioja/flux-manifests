@@ -24,11 +24,6 @@ spec:
   releaseName: weave-gitops
   targetNamespace: demo-ns
   values:
-    adminUser:
-      # -- Whether the local admin user should be created.
-      # If you use this make sure you add it to `rbac.impersonationResourceNames`.
-      create: true
-    username: admin
     ingress:
       enabled: true
       className: ""
