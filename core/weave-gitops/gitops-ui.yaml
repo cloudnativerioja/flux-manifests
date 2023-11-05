@@ -33,7 +33,10 @@ spec:
         traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
         traefik.ingress.kubernetes.io/router.tls: "true"
       hosts:
-        - gitops.flux.cloudnativerioja.com
+        - host: gitops.flux.cloudnativerioja.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
       tls:
         - hosts:
             - gitops.flux.cloudnativerioja.com
