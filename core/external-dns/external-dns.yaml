@@ -42,8 +42,8 @@ spec:
             name: cloudflare-api-key
     interval: 5m
     policy: sync
-    txtOwnerId: cloudnativerioja
-    txtPrefix: cloudnativerioja.
+    txtOwnerId: fluxcloudnativerioja
+    txtPrefix: fluxcloudnativerioja.
     logLevel: debug
     resources:
       requests:
