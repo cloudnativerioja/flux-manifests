@@ -1,0 +1,28 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rioja-user-read-resources-cr
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: wego-admin-cluster-role
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: rioja
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rioja-user-read-resources
+  namespace: demo-ns
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: wego-admin-role
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: wego-admin
+    namespace: demo-ns
