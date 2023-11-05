@@ -29,6 +29,8 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    domainFilters:
+      - flux.cloudnativerioja.com
     provider: cloudflare
     env:
       - name: CF_API_EMAIL
