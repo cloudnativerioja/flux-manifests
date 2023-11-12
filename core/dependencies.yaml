@@ -14,3 +14,4 @@ spec:
   path: "./dependencies/"
   prune: true
   timeout: 1m
+  wait: true
