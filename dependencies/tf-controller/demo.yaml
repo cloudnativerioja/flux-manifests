@@ -1,0 +1,24 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: branch-planner-demo
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/cloudnativerioja/demos-iac
+  ref:
+    branch: master
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha2
+kind: Terraform
+metadata:
+  name: branch-planner-demo
+  namespace: terraform
+spec:
+  approvePlan: auto
+  path: ./terraform/http/
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: branch-planner-demo
+    namespace: flux-system
