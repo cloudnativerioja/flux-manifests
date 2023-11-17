@@ -13,7 +13,7 @@ apiVersion: infra.contrib.fluxcd.io/v1alpha2
 kind: Terraform
 metadata:
   name: branch-planner-demo
-  namespace: terraform
+  namespace: flux-system
 spec:
   approvePlan: auto
   path: ./terraform/http/
