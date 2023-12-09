@@ -25,4 +25,5 @@ spec:
   varsFrom:
     - kind: Secret
       name: civo-token
-      value: civo_token
+      varsKeys:
+        - civo_token
