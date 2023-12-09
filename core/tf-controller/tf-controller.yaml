@@ -31,3 +31,13 @@ spec:
     allowCrossNamespaceRefs: true
     branchPlanner:
       enabled: false
+    runner:
+      serviceAccount:
+        # -- If `true`, create a new runner service account
+        create: true
+        # -- Additional runner service Account annotations
+        annotations: {}
+        # -- Runner service account to be used
+        name: ""
+        # -- List of namespaces that the runner may run within
+        allowedNamespaces: ["terraform"]
