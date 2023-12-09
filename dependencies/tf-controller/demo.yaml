@@ -17,6 +17,7 @@ metadata:
 spec:
   approvePlan: ""
   path: ./terraform/civo/
+  storeReadablePlan: "cluster-plan"
   interval: 1m
   sourceRef:
     kind: GitRepository
