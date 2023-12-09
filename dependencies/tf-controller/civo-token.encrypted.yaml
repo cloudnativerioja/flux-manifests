@@ -1,0 +1,18 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/cluster-wide: "true"
+  creationTimestamp: null
+  name: civo-token
+  namespace: terraform
+spec:
+  encryptedData:
+    civo_token: AgBRW4ENPIncoU7zSUdBqMxTcEyF6XJufsjgk+fi7eksLrLP2GtnCZlds2d58kffmKqixu7QMFYEQfKQqsOdS9O2GdsPvY0zkpR4WIJJ2GupPjoqQReecP9kBow0tn1MasgYMVxv/XFtlK32SWmfUppBPNnBKRC0/6KdA+myMzfrJor8SwVUmX3JDEE1zkX3IRxQasyt98xFNi65aCNe9S5H1eprYlHBbiU4KUhii+Zq1xVoZI6ZC7q8Y/5d/I7Ku6u8ZEaXZlLRFMj06e1AK/A/cxsIlDMOXGXAmN2//FzxdWX75H89eTGJywrhQVZftLCuWd1ZyYDKFboPRJmP3M0g9zb53zOtH5RxB7JvnonhaVIHEIE3Oo0MAmsoMjt5+lZaijQ4y9FCVikpGv5bIply6KFo3FMsMq9ONK30UkRG5IH8Av25RCM6whLhSZyr6CZ4cOHwuPMI6MQDpG1zYurH0VlGzCDxKKwJZRIIRhw8k0Xka8mr8ybEZAGnY9mqVxIc52bmJwGi5XpRnuGFGoLFCYZqtT63aNK/vmGav2CEbUk8iXTsZpb196BGHW5+swPPDYPMq02KPNY9igL55I5l28LLb5zMBhVOfHyD24M3/7ToQn7YGFsiebd+YVu/YK1pp6Caf2ClUH0MRef6Dn26tqOObomIkD0AoMcPUB2DNqvZCGWyQbev4kmPciiAwz3YGqlJOevg5QmAuKbHL1Y/o7zJlWL4IvwKg+C+UOTANyIRNYTag0xQ5O3uG4mxUrQ7gQ==
+  template:
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/cluster-wide: "true"
+      creationTimestamp: null
+      name: civo-token
+      namespace: terraform

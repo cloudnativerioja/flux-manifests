@@ -30,4 +30,4 @@ spec:
   values:
     allowCrossNamespaceRefs: true
     branchPlanner:
-      enabled: true
+      enabled: false

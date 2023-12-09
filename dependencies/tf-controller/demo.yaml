@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: branch-planner-demo
+  name: cluster-deploy
   namespace: flux-system
 spec:
   interval: 30s
@@ -12,13 +12,17 @@ spec:
 apiVersion: infra.contrib.fluxcd.io/v1alpha2
 kind: Terraform
 metadata:
-  name: branch-planner-demo
-  namespace: flux-system
+  name: cluster-deploy-tf-controller
+  namespace: terraform
 spec:
   approvePlan: ""
-  path: ./terraform/http/
+  path: ./terraform/civo/
   interval: 1m
   sourceRef:
     kind: GitRepository
-    name: branch-planner-demo
+    name: cluster-deploy
     namespace: flux-system
+  varsFrom:
+    - kind: Secret
+      name: civo-token
+      value: civo_token
