@@ -15,7 +15,7 @@ metadata:
   name: branch-planner-demo
   namespace: flux-system
 spec:
-  approvePlan: auto
+  approvePlan: ""
   path: ./terraform/http/
   interval: 1m
   sourceRef:
