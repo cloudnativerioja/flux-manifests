@@ -15,7 +15,7 @@ metadata:
   name: cluster-deploy-tf-controller
   namespace: terraform
 spec:
-  approvePlan: ""
+  approvePlan: "plan-master-d58be7f58e"
   path: ./terraform/civo/
   storeReadablePlan: "human"
   destroyResourcesOnDeletion: true
